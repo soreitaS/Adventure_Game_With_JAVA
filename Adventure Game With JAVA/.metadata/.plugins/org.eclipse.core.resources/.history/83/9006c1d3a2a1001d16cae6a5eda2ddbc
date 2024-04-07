@@ -1,0 +1,27 @@
+
+public abstract class BattleLoc extends Location{
+	
+protected Obstacle obstacle;
+	
+	BattleLoc(Player player,String name,Obstacle obstacle) {
+		super(player);
+		this.obstacle=obstacle;
+		this.name=name;
+	}
+	
+	public boolean getLocation() {
+		int obsCount = obstacle.count();
+		System.out.println("Şuan buradasınız: " + this.getName());
+		System.out.println("Dikkatli ol! Burada " + obsCount + " tane " + obstacle.getName() + " var.");
+		System.out.println("<S>avaş yada <K>aç");
+		String selCase = scan.next();
+		selCase = selCase.toUpperCase();
+		
+		return true;
+	    }
+	
+	public boolean combat(int obsCount) {
+		return true;
+	}
+
+}
